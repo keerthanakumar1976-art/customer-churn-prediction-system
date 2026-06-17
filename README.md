@@ -221,4 +221,4 @@ This project is intended for educational and academic purposes.
 
 ## 👨‍💻 Author
 
-Developed as a Final Year Project for academic learning, customer retention analysis, and machine learning application development.
+Developed as a Mini Project for academic learning, customer retention analysis, and machine learning application development.
