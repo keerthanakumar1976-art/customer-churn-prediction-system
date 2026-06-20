@@ -17,12 +17,12 @@ function Predict() {
 
   const [result, setResult] = useState(null);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+    const handleChange = (e) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      });
+    };
 
   const handlePredict = async () => {
     try {
@@ -32,8 +32,14 @@ function Predict() {
       );
 
       setResult(res.data);
+
     } catch (error) {
-      console.error("Prediction Error:", error);
+      console.error(error);
+
+      if (error.response) {
+        console.log("Backend Error:", error.response.data);
+      }
+
       alert("Prediction failed. Check backend.");
     }
   };
